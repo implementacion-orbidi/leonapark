@@ -1,10 +1,10 @@
-import { LitElement, html, unsafeCSS } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { classMap } from "lit/directives/class-map.js";
-import { instagramIcon } from "../assets/icons/instagram";
-import { mapsIcon } from "../assets/icons/maps";
-import { whatsappIcon } from "../assets/icons/whatsapp";
-import { bootstrapStyles } from "../styles/shared-styles";
+import {LitElement, html, unsafeCSS} from "lit";
+import {customElement, property} from "lit/decorators.js";
+import {classMap} from "lit/directives/class-map.js";
+import {instagramIcon} from "../assets/icons/instagram";
+import {mapsIcon} from "../assets/icons/maps";
+import {whatsappIcon} from "../assets/icons/whatsapp";
+import {bootstrapStyles} from "../styles/shared-styles";
 import styles from "./leona-park-side-menu.scss?inline";
 
 export enum LeonaParkSection {
@@ -118,13 +118,25 @@ export class LeonaParkSideMenu extends LitElement {
       </ul>
 
       <footer class="mt-auto p-3 d-flex justify-content-center gap-3">
-        <a href="https://instagram.com/leonapark10/" target="_blank">
+        <a
+          href="https://instagram.com/leonapark10/"
+          target="_blank"
+          aria-label="Instagram de Leona Park"
+        >
           ${instagramIcon}
         </a>
-        <a href="https://maps.app.goo.gl/PtdZDKtbBz9Ah8vc9" target="_blank">
+        <a
+          href="https://maps.app.goo.gl/PtdZDKtbBz9Ah8vc9"
+          target="_blank"
+          aria-label="Ubicación en Google Maps"
+        >
           ${mapsIcon}
         </a>
-        <a href="https://wa.me/34644365646" target="_blank">
+        <a
+          href="https://wa.me/34644365646"
+          target="_blank"
+          aria-label="Contactar por WhatsApp"
+        >
           ${whatsappIcon}
         </a>
       </footer>

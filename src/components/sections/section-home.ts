@@ -14,6 +14,7 @@ export class SectionHome extends LitElement {
         <div class="col-12">
           <div class="mt-0 mx-3 d-flex flex-column gap-4 fs-5">
             <div class="leona-park-logo position-sticky top-0 pt-5 pb-3 text-center bg-white">
+              <h1 class="visually-hidden">Leona Park</h1>
               <img
                 src=${leonaParkLogo}
                 alt="Leona Park logo"
