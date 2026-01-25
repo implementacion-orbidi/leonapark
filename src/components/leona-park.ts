@@ -1,14 +1,14 @@
-import { LitElement, html, nothing, unsafeCSS } from "lit";
-import { customElement, state } from "lit/decorators.js";
-import { choose } from "lit/directives/choose.js";
-import { classMap } from "lit/directives/class-map.js";
-import { menuIcon } from "../assets/icons/menu";
+import {LitElement, html, nothing, unsafeCSS} from "lit";
+import {customElement, state} from "lit/decorators.js";
+import {choose} from "lit/directives/choose.js";
+import {classMap} from "lit/directives/class-map.js";
+import {menuIcon} from "../assets/icons/menu";
 import leonaParkNoTextLogo from "../assets/leona-park-no-text-logo.svg";
 import "../styles.scss";
-import { bootstrapStyles } from "../styles/shared-styles";
+import {bootstrapStyles} from "../styles/shared-styles";
 import "./leona-park-header";
 import "./leona-park-side-menu";
-import { LeonaParkSection } from "./leona-park-side-menu";
+import {LeonaParkSection} from "./leona-park-side-menu";
 import styles from "./leona-park.scss?inline";
 import "./sections/section-contact";
 import "./sections/section-facilities";
@@ -95,7 +95,7 @@ export class LeonaPark extends LitElement {
       ></leona-park-side-menu>
 
       <!-- Main content -->
-      <main @click=${() => (this.isMenuExpanded = false)}>
+      <main class="pb-5" @click=${() => (this.isMenuExpanded = false)}>
         ${choose(
           this.section,
           [
