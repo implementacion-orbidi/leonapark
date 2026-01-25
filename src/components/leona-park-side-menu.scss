@@ -1,15 +1,7 @@
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
 :host {
-  @extend .position-fixed;
-  @extend .top-0;
-  @extend .start-0;
-  @extend .bottom-0;
-  @extend .pt-3;
-  @extend .d-flex;
-  @extend .flex-column;
-  @extend .overflow-x-hidden;
-  @extend .shadow-lg;
   width: 0;
   z-index: 9;
   background-color: #5f9e9c;
@@ -30,8 +22,6 @@
 
   & a,
   button {
-    @extend .fs-3;
-    @extend .text-nowrap;
     --bs-nav-link-color: #f1f1f1;
     --bs-nav-link-hover-color: #f1f1f1;
 

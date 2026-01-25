@@ -1,4 +1,5 @@
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
 :host {
   font-family: "Noto Serif", serif;
@@ -61,4 +62,18 @@
       rgba(95, 158, 156, 0.4) calc(100% - 1em),
       transparent calc(100% - 1em)
     );
+}
+
+.contact-map-iframe {
+  height: 500px;
+}
+
+.contact-link {
+  fill: #a97038;
+  color: #5f9e9c;
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
 }

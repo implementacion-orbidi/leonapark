@@ -1,4 +1,5 @@
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
 :host {
   font-family: "Noto Serif", serif;
@@ -27,12 +28,10 @@
 }
 
 .leona-park-logo {
-  @extend .position-sticky;
-  @extend .top-0;
-  @extend .pt-5;
-  @extend .pb-3;
-  @extend .text-center;
-  @extend .bg-white;
   z-index: 8;
   opacity: 0.9;
+}
+
+.logo-image {
+  max-width: 500px;
 }

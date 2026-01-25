@@ -1,11 +1,12 @@
 import { LitElement, html, unsafeCSS } from "lit";
 import { customElement } from "lit/decorators.js";
 import { logoIcon } from "../../assets/icons/logo";
+import { bootstrapStyles } from "../../styles/shared-styles";
 import styles from "./section-rates.scss?inline";
 
 @customElement("section-rates")
 export class SectionRates extends LitElement {
-  public static styles = unsafeCSS(styles);
+  public static styles = [bootstrapStyles, unsafeCSS(styles)];
 
   render() {
     return html`
@@ -22,15 +23,13 @@ export class SectionRates extends LitElement {
               <ul class="card-text ps-0 m-md-2">
                 <li class="mb-2 d-flex gap-2">
                   <span
-                    class="d-flex align-self-stretch mt-1"
-                    style="width: 15px; height: 15px; min-width: 15px; min-heigh: 15px;"
+                    class="d-flex align-self-stretch mt-1 list-icon"
                     >${logoIcon}</span
                   ><span>140€, lunes a jueves (no festivos).</span>
                 </li>
                 <li class="d-flex gap-2">
                   <span
-                    class="d-flex align-self-stretch mt-1"
-                    style="width: 15px; height: 15px; min-width: 15px; min-heigh: 15px;"
+                    class="d-flex align-self-stretch mt-1 list-icon"
                     >${logoIcon}</span
                   ><span>170€, viernes, sábados, domingos y festivos.</span>
                 </li>
@@ -51,8 +50,7 @@ export class SectionRates extends LitElement {
               <ul class="card-text ps-0 m-md-2">
                 <li class="d-flex gap-2">
                   <span
-                    class="d-flex align-self-stretch mt-1"
-                    style="width: 15px; height: 15px; min-width: 15px; min-heigh: 15px;"
+                    class="d-flex align-self-stretch mt-1 list-icon"
                     >${logoIcon}</span
                   ><span
                     >230€, 1 de enero, 5 de enero, 6 de enero, 31 de octubre, 24

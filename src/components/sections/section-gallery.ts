@@ -19,6 +19,7 @@ import carouselImage14 from "../../assets/gallery/leona_park_14.jpg";
 import carouselImage15 from "../../assets/gallery/leona_park_15.jpg";
 import carouselImage16 from "../../assets/gallery/leona_park_16.jpg";
 import carouselImage17 from "../../assets/gallery/leona_park_17.jpg";
+import { bootstrapStyles } from "../../styles/shared-styles";
 import styles from "./section-gallery.scss?inline";
 
 const CAROUSEL_IMAGES = [
@@ -43,7 +44,7 @@ const CAROUSEL_IMAGES = [
 
 @customElement("section-gallery")
 export class SectionGallery extends LitElement {
-  public static styles = unsafeCSS(styles);
+  public static styles = [bootstrapStyles, unsafeCSS(styles)];
 
   @query("#leonaParkCarousel")
   private leonaParkCarousel!: HTMLDivElement;
@@ -60,9 +61,8 @@ export class SectionGallery extends LitElement {
         <div class="col-12">
           <div
             id="leonaParkCarousel"
-            class="carousel slide mx-auto w-100 p-3"
+            class="carousel slide mx-auto w-100 p-3 gallery-carousel"
             data-bs-ride="true"
-            style="max-width: 500px; background-color: #5f9e9c"
           >
             <div class="carousel-indicators">
               ${CAROUSEL_IMAGES.map(
@@ -85,9 +85,10 @@ export class SectionGallery extends LitElement {
                   <div class="carousel-item ${classMap({ active: !index })}">
                     <img
                       src="${image}"
-                      class="d-block w-100"
+                      class="d-block w-100 gallery-image"
                       alt="Foto de las instalaciones de Leona Park"
-                      style="max-width: 500px;"
+                      loading="${index === 0 ? "eager" : "lazy"}"
+                      fetchpriority="${index === 0 ? "high" : "auto"}"
                     />
                   </div>
                 `

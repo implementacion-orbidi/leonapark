@@ -4,6 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { instagramIcon } from "../assets/icons/instagram";
 import { mapsIcon } from "../assets/icons/maps";
 import { whatsappIcon } from "../assets/icons/whatsapp";
+import { bootstrapStyles } from "../styles/shared-styles";
 import styles from "./leona-park-side-menu.scss?inline";
 
 export enum LeonaParkSection {
@@ -17,7 +18,7 @@ export enum LeonaParkSection {
 
 @customElement("leona-park-side-menu")
 export class LeonaParkSideMenu extends LitElement {
-  public static styles = unsafeCSS(styles);
+  public static styles = [bootstrapStyles, unsafeCSS(styles)];
 
   @property({ type: String })
   public section?: LeonaParkSection;
@@ -43,7 +44,7 @@ export class LeonaParkSideMenu extends LitElement {
         >
           <button
             type="button"
-            class="nav-link w-100 text-start"
+            class="nav-link w-100 text-start fs-3 text-nowrap"
             @click=${() => this.changeSection(LeonaParkSection.HOME)}
           >
             Inicio
@@ -56,7 +57,7 @@ export class LeonaParkSideMenu extends LitElement {
         >
           <button
             type="button"
-            class="nav-link w-100 text-start"
+            class="nav-link w-100 text-start fs-3 text-nowrap"
             @click=${() => this.changeSection(LeonaParkSection.FACILITIES)}
           >
             Nuestra sala
@@ -69,7 +70,7 @@ export class LeonaParkSideMenu extends LitElement {
         >
           <button
             type="button"
-            class="nav-link w-100 text-start"
+            class="nav-link w-100 text-start fs-3 text-nowrap"
             @click=${() => this.changeSection(LeonaParkSection.PROTOCOL)}
           >
             Cómo funciona
@@ -82,7 +83,7 @@ export class LeonaParkSideMenu extends LitElement {
         >
           <button
             type="button"
-            class="nav-link w-100 text-start"
+            class="nav-link w-100 text-start fs-3 text-nowrap"
             @click=${() => this.changeSection(LeonaParkSection.RATES)}
           >
             Tarifas
@@ -95,7 +96,7 @@ export class LeonaParkSideMenu extends LitElement {
         >
           <button
             type="button"
-            class="nav-link w-100 text-start"
+            class="nav-link w-100 text-start fs-3 text-nowrap"
             @click=${() => this.changeSection(LeonaParkSection.GALLERY)}
           >
             Galería
@@ -108,7 +109,7 @@ export class LeonaParkSideMenu extends LitElement {
         >
           <button
             type="button"
-            class="nav-link w-100 text-start"
+            class="nav-link w-100 text-start fs-3 text-nowrap"
             @click=${() => this.changeSection(LeonaParkSection.CONTACT)}
           >
             Contacto

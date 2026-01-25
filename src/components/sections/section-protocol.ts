@@ -1,12 +1,13 @@
 import { LitElement, html, unsafeCSS } from "lit";
 import { customElement } from "lit/decorators.js";
 import { logoIcon } from "../../assets/icons/logo";
+import { bootstrapStyles } from "../../styles/shared-styles";
 import { LeonaParkSection } from "../leona-park-side-menu";
 import styles from "./section-protocol.scss?inline";
 
 @customElement("section-protocol")
 export class SectionProtocol extends LitElement {
-  public static styles = unsafeCSS(styles);
+  public static styles = [bootstrapStyles, unsafeCSS(styles)];
 
   private changeSection(section: LeonaParkSection) {
     this.dispatchEvent(

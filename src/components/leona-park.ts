@@ -5,6 +5,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { menuIcon } from "../assets/icons/menu";
 import leonaParkNoTextLogo from "../assets/leona-park-no-text-logo.svg";
 import "../styles.scss";
+import { bootstrapStyles } from "../styles/shared-styles";
 import "./leona-park-header";
 import "./leona-park-side-menu";
 import { LeonaParkSection } from "./leona-park-side-menu";
@@ -27,7 +28,7 @@ const LeonaParkSections = [
 
 @customElement("leona-park")
 export class LeonaPark extends LitElement {
-  public static styles = unsafeCSS(styles);
+  public static styles = [bootstrapStyles, unsafeCSS(styles)];
 
   @state()
   private section?: LeonaParkSection;
@@ -87,6 +88,7 @@ export class LeonaPark extends LitElement {
 
       <!-- Side menu -->
       <leona-park-side-menu
+        class="position-fixed top-0 start-0 bottom-0 pt-3 d-flex flex-column overflow-x-hidden shadow-lg"
         .section=${this.section}
         .isMenuExpanded=${this.isMenuExpanded}
         @request-change-section=${this.onRequestChangeSection}

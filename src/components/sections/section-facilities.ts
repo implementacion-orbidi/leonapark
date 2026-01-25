@@ -1,5 +1,6 @@
-import { LitElement, TemplateResult, html, unsafeCSS } from "lit";
-import { customElement } from "lit/decorators.js";
+import {LitElement, TemplateResult, html, unsafeCSS} from "lit";
+import {customElement} from "lit/decorators.js";
+import {bootstrapStyles} from "../../styles/shared-styles";
 import styles from "./section-facilities.scss?inline";
 
 type Facility = { title: string; description: string | TemplateResult };
@@ -7,7 +8,7 @@ type Facility = { title: string; description: string | TemplateResult };
 const facilities: Facility[] = [
   {
     title: "ESPACIO Y CAPACIDAD",
-    description: html`Sala de 100m<sup>2</sup> con capacidad para 60 personas en
+    description: html`Sala de 100m<sup>2</sup> con capacidad para 50 personas en
       total.`,
   },
   {
@@ -71,7 +72,7 @@ const facilities: Facility[] = [
 
 @customElement("section-facilities")
 export class SectionFacilities extends LitElement {
-  public static styles = unsafeCSS(styles);
+  public static styles = [bootstrapStyles, unsafeCSS(styles)];
 
   render() {
     return html`
