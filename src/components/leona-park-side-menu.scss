@@ -9,6 +9,7 @@
   font-family: "Amatic SC", serif;
   font-weight: 700;
   font-style: normal;
+  overflow: hidden;
 }
 
 :host([is-menu-expanded]) {
